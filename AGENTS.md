@@ -36,6 +36,15 @@ LICENSE
 7. 如果新增模板或脚本，优先同步更新 `README.md`
 8. 不要在这个仓库中加入敏感信息、私钥、token 或本地环境特定路径
 
+## Prompt 维护规则
+
+1. 所有 prompt 必须中文清晰
+2. 每个 prompt 都要写明用途
+3. 面向小白的 prompt 必须要求英文术语翻译
+4. Markdown 必须保持正常多行格式
+5. 不要写入本机绝对路径
+6. 修改 prompt 后必须运行 `bash scripts/check-kit.sh`
+
 ## 更新 ECC 内容
 
 默认 ECC 路径是：

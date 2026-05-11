@@ -125,6 +125,9 @@ Windows PowerShell：
 
 仓库内置以下模板：
 
+- [`prompts/repo-overview-teacher.md`](prompts/repo-overview-teacher.md)：第一次看项目时先做宏观讲解
+- [`prompts/repo-deep-teacher.md`](prompts/repo-deep-teacher.md)：逐文件夹、逐文件、逐文档深度讲解项目
+- [`prompts/repo-md-explainer.md`](prompts/repo-md-explainer.md)：单独讲解某个 Markdown 文档
 - [`prompts/deploy-any-github-project.md`](prompts/deploy-any-github-project.md)：通用部署模板，适合大多数 GitHub 开源项目
 - [`prompts/deploy-python-project.md`](prompts/deploy-python-project.md)：Python 项目专用模板
 - [`prompts/deploy-node-project.md`](prompts/deploy-node-project.md)：Node.js / Next.js / React 项目专用模板
@@ -135,11 +138,25 @@ Windows PowerShell：
 
 你可以：
 
+- 如果是第一次看一个项目，先用 `repo-overview-teacher`
+- 如果已经有整体印象，想继续深挖，再用 `repo-deep-teacher`
+- 如果某个 `README`、`AGENTS.md` 或 `docs/*.md` 看不懂，单独用 `repo-md-explainer`
 - 直接复制通用模板后粘贴 GitHub 地址
 - 按项目类型选择 Python / Node / Flutter 模板
 - 如果只想学习项目，先用 `repo-learning-notes`
 - 如果担心安装脚本或依赖有风险，先用 `repo-risk-check`
 - 参考 `pyvideotrans` 示例快速复用
+
+推荐使用顺序：
+
+1. `repo-overview-teacher.md`
+2. `repo-deep-teacher.md`
+3. `repo-md-explainer.md`
+4. `repo-risk-check.md`
+5. `deploy-any-github-project.md`
+
+解释：
+先理解，再深度学习，再拆文档，再检查风险，最后部署。
 
 ## 推荐检查命令
 

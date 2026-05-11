@@ -48,6 +48,9 @@ check_file "${KIT_ROOT}/README.md"
 check_file "${KIT_ROOT}/AGENTS.md"
 check_file "${KIT_ROOT}/prompts/repo-learning-notes.md"
 check_file "${KIT_ROOT}/prompts/repo-risk-check.md"
+check_file "${KIT_ROOT}/prompts/repo-overview-teacher.md"
+check_file "${KIT_ROOT}/prompts/repo-deep-teacher.md"
+check_file "${KIT_ROOT}/prompts/repo-md-explainer.md"
 check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
 
 if [[ "${failures}" -gt 0 ]]; then
