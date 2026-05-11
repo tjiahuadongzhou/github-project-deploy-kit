@@ -162,6 +162,32 @@ Windows PowerShell：
 解释：
 先宏观理解，再深入拆解，再生成可视化网页 PPT，再检查风险，最后部署。
 
+## Prompt 和 Skill 的区别
+
+- `prompts/` 是给人复制粘贴的提示词模板，适合手动挑选、修改、转发，也适合跨工具复用
+- `.claude/skills/` 是 Claude Code 可直接调用的技能，适合在 Claude Code 里按名字触发
+- `prompts` 更适合学习、整理方法论和跨平台使用
+- `skills` 更适合在 Claude Code 里做固定流程调用
+- 两者内容相似，但用途不同：`prompt` 偏“模板”，`skill` 偏“可调用能力”
+
+## Skill 快速使用方式
+
+如果这些 skill 已经放进当前项目的 `.claude/skills/`，可以在 Claude Code 中按下面方式使用：
+
+- `/repo-overview-teacher <GitHub 地址>`：第一次看一个项目时，用老师式宏观讲解帮助快速入门
+- `/repo-deep-teacher <GitHub 地址>`：继续做逐文件夹、逐文件、逐文档的深度拆解
+- `/repo-md-explainer <GitHub 地址 + 文档路径>`：专门讲解某个 `README.md`、`AGENTS.md` 或 `docs/*.md`
+- `/repo-web-ppt-builder <GitHub 地址>`：把项目整理成适合浏览器直接打开的网页版 PPT
+- `/repo-risk-check <GitHub 地址>`：部署前先做只读风险检查
+- `/deploy-any-github-project <GitHub 地址>`：确认值得部署后，再按步骤做环境检查、安装计划和实际部署
+
+这些 skill 默认更保守：
+
+- 优先只读分析
+- 不默认安装依赖
+- 不默认修改原项目源码
+- 重型 skill 都设置了 `disable-model-invocation: true`，避免被自动乱调用
+
 ## 推荐检查命令
 
 可以在仓库根目录运行：
@@ -175,7 +201,7 @@ Windows PowerShell：
 - `.claude/agents` 是否存在
 - `.claude/skills` 是否存在
 - 4 个 agent 文件是否齐全
-- 3 个 skill 目录及 `SKILL.md` 是否齐全
+- 内置 skill 目录及 `SKILL.md` 是否齐全
 - `prompts` 是否存在
 - `README.md` 是否存在
 

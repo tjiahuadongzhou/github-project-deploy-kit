@@ -44,6 +44,11 @@ LICENSE
 4. Markdown 必须保持正常多行格式
 5. 不要写入本机绝对路径
 6. 修改 prompt 后必须运行 `bash scripts/check-kit.sh`
+7. `prompts` 和 `skills` 要保持同步
+8. 如果修改 `prompts/repo-deep-teacher.md`，也要同步修改 `.claude/skills/repo-deep-teacher/SKILL.md`
+9. 新增高频 prompt 时，优先考虑是否也要新增 skill
+10. 重型 skill 默认必须设置 `disable-model-invocation: true`
+11. 提交前必须检查文件不是单行压缩格式
 
 ## PPT / UI Prompt 规则
 
@@ -53,6 +58,12 @@ LICENSE
 4. 输出要适合小白学习
 5. 不要安装依赖，除非用户明确要求
 6. 不要修改被分析的原始 GitHub 项目源码
+
+## 提交前检查
+
+1. 修改 `scripts/` 后必须运行 `bash scripts/check-kit.sh`
+2. 修改重型 prompt / skill 后，建议同时运行 `wc -l` 抽查关键文件行数
+3. 如果发现文件被压成单行或极少几行，先修复格式再提交
 
 ## 更新 ECC 内容
 

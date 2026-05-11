@@ -7,6 +7,18 @@ KIT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 failures=0
 
+check_contains() {
+  local path="$1"
+  local pattern="$2"
+
+  if grep -Fq "${pattern}" "${path}"; then
+    echo "OK   ${path} contains ${pattern}"
+  else
+    echo "MISS ${path} missing ${pattern}"
+    failures=$((failures + 1))
+  fi
+}
+
 check_file() {
   local path="$1"
   if [[ -f "${path}" ]]; then
@@ -38,10 +50,22 @@ check_file "${KIT_ROOT}/.claude/agents/python-reviewer.md"
 check_dir "${KIT_ROOT}/.claude/skills/codebase-onboarding"
 check_dir "${KIT_ROOT}/.claude/skills/code-tour"
 check_dir "${KIT_ROOT}/.claude/skills/documentation-lookup"
+check_dir "${KIT_ROOT}/.claude/skills/repo-overview-teacher"
+check_dir "${KIT_ROOT}/.claude/skills/repo-deep-teacher"
+check_dir "${KIT_ROOT}/.claude/skills/repo-md-explainer"
+check_dir "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder"
+check_dir "${KIT_ROOT}/.claude/skills/repo-risk-check"
+check_dir "${KIT_ROOT}/.claude/skills/deploy-any-github-project"
 
 check_file "${KIT_ROOT}/.claude/skills/codebase-onboarding/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/code-tour/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/documentation-lookup/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md"
 
 check_dir "${KIT_ROOT}/prompts"
 check_file "${KIT_ROOT}/README.md"
@@ -54,6 +78,30 @@ check_file "${KIT_ROOT}/prompts/repo-md-explainer.md"
 check_file "${KIT_ROOT}/prompts/repo-web-ppt-builder.md"
 check_file "${KIT_ROOT}/prompts/repo-slidev-builder.md"
 check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
+
+check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "disable-model-invocation: true"
+
+check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "disable-model-invocation: true"
+
+check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "disable-model-invocation: true"
+
+check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "disable-model-invocation: true"
+
+check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "disable-model-invocation: true"
+
+check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "name:"
+check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "description:"
+check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "disable-model-invocation: true"
 
 if [[ "${failures}" -gt 0 ]]; then
   echo "工具包检查失败，共 ${failures} 项缺失。"
