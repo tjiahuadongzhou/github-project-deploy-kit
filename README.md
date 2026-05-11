@@ -128,6 +128,8 @@ Windows PowerShell：
 - [`prompts/repo-overview-teacher.md`](prompts/repo-overview-teacher.md)：第一次看项目时先做宏观讲解
 - [`prompts/repo-deep-teacher.md`](prompts/repo-deep-teacher.md)：逐文件夹、逐文件、逐文档深度讲解项目
 - [`prompts/repo-md-explainer.md`](prompts/repo-md-explainer.md)：单独讲解某个 Markdown 文档
+- [`prompts/repo-web-ppt-builder.md`](prompts/repo-web-ppt-builder.md)：把 GitHub 项目生成单文件网页版 PPT
+- [`prompts/repo-slidev-builder.md`](prompts/repo-slidev-builder.md)：把 GitHub 项目生成 Slidev 演示文稿
 - [`prompts/deploy-any-github-project.md`](prompts/deploy-any-github-project.md)：通用部署模板，适合大多数 GitHub 开源项目
 - [`prompts/deploy-python-project.md`](prompts/deploy-python-project.md)：Python 项目专用模板
 - [`prompts/deploy-node-project.md`](prompts/deploy-node-project.md)：Node.js / Next.js / React 项目专用模板
@@ -141,6 +143,8 @@ Windows PowerShell：
 - 如果是第一次看一个项目，先用 `repo-overview-teacher`
 - 如果已经有整体印象，想继续深挖，再用 `repo-deep-teacher`
 - 如果某个 `README`、`AGENTS.md` 或 `docs/*.md` 看不懂，单独用 `repo-md-explainer`
+- 如果想做成适合复习或分享的网页讲解页面，用 `repo-web-ppt-builder`
+- 如果想做成更像演示文稿的网页幻灯片，用 `repo-slidev-builder`
 - 直接复制通用模板后粘贴 GitHub 地址
 - 按项目类型选择 Python / Node / Flutter 模板
 - 如果只想学习项目，先用 `repo-learning-notes`
@@ -151,12 +155,12 @@ Windows PowerShell：
 
 1. `repo-overview-teacher.md`
 2. `repo-deep-teacher.md`
-3. `repo-md-explainer.md`
+3. `repo-web-ppt-builder.md`
 4. `repo-risk-check.md`
 5. `deploy-any-github-project.md`
 
 解释：
-先理解，再深度学习，再拆文档，再检查风险，最后部署。
+先宏观理解，再深入拆解，再生成可视化网页 PPT，再检查风险，最后部署。
 
 ## 推荐检查命令
 

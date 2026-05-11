@@ -51,6 +51,8 @@ check_file "${KIT_ROOT}/prompts/repo-risk-check.md"
 check_file "${KIT_ROOT}/prompts/repo-overview-teacher.md"
 check_file "${KIT_ROOT}/prompts/repo-deep-teacher.md"
 check_file "${KIT_ROOT}/prompts/repo-md-explainer.md"
+check_file "${KIT_ROOT}/prompts/repo-web-ppt-builder.md"
+check_file "${KIT_ROOT}/prompts/repo-slidev-builder.md"
 check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
 
 if [[ "${failures}" -gt 0 ]]; then
