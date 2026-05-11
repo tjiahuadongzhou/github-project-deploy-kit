@@ -2,6 +2,30 @@
 
 中文名：GitHub 开源项目部署助手包
 
+## 30 秒快速使用
+
+```bash
+git clone https://github.com/tjiahuadongzhou/github-project-deploy-kit.git
+cd github-project-deploy-kit
+claude
+```
+
+进入 Claude Code 后先输入：
+
+```text
+/agents
+/skills
+```
+
+确认能看到 `.claude/agents` 和 `.claude/skills`。
+
+然后：
+
+1. 打开 `prompts/deploy-any-github-project.md`
+2. 复制提示词模板
+3. 替换其中的 GitHub 项目地址
+4. 明确要求 Claude Code 先只读分析，再检查环境，再输出安装计划
+
 ## 这个项目是做什么的？
 
 这是一个面向 Claude Code / Codex 的辅助工具包，用于部署、理解、运行、讲解 GitHub 开源项目。
@@ -62,7 +86,7 @@ claude
 
 确认能看到 `.claude/agents` 和 `.claude/skills` 中的内容。
 
-然后打开 [`prompts/deploy-any-github-project.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-any-github-project.md)，复制里面的提示词，把其中的 GitHub 地址替换成目标项目地址即可。
+然后打开 [`prompts/deploy-any-github-project.md`](prompts/deploy-any-github-project.md)，复制里面的提示词，把其中的 GitHub 地址替换成目标项目地址即可。
 
 ### 方式二：把工具包安装到某个已有项目
 
@@ -101,16 +125,20 @@ Windows PowerShell：
 
 仓库内置以下模板：
 
-- [`prompts/deploy-any-github-project.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-any-github-project.md)
-- [`prompts/deploy-python-project.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-python-project.md)
-- [`prompts/deploy-node-project.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-node-project.md)
-- [`prompts/deploy-flutter-project.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-flutter-project.md)
-- [`prompts/deploy-pyvideotrans.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-pyvideotrans.md)
+- [`prompts/deploy-any-github-project.md`](prompts/deploy-any-github-project.md)：通用部署模板，适合大多数 GitHub 开源项目
+- [`prompts/deploy-python-project.md`](prompts/deploy-python-project.md)：Python 项目专用模板
+- [`prompts/deploy-node-project.md`](prompts/deploy-node-project.md)：Node.js / Next.js / React 项目专用模板
+- [`prompts/deploy-flutter-project.md`](prompts/deploy-flutter-project.md)：Flutter 项目专用模板
+- [`prompts/deploy-pyvideotrans.md`](prompts/deploy-pyvideotrans.md)：`pyVideoTrans` 专用模板
+- [`prompts/repo-learning-notes.md`](prompts/repo-learning-notes.md)：只读学习模板，适合先理解项目而不部署
+- [`prompts/repo-risk-check.md`](prompts/repo-risk-check.md)：部署前风险检查模板，适合先做安全评估
 
 你可以：
 
 - 直接复制通用模板后粘贴 GitHub 地址
 - 按项目类型选择 Python / Node / Flutter 模板
+- 如果只想学习项目，先用 `repo-learning-notes`
+- 如果担心安装脚本或依赖有风险，先用 `repo-risk-check`
 - 参考 `pyvideotrans` 示例快速复用
 
 ## 推荐检查命令
@@ -157,12 +185,12 @@ Windows PowerShell：
 
 请保留原始 LICENSE 和 attribution。本仓库已将其许可证副本保存到：
 
-- [`THIRD_PARTY_LICENSES/everything-claude-code-LICENSE`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/THIRD_PARTY_LICENSES/everything-claude-code-LICENSE)
+- [`THIRD_PARTY_LICENSES/everything-claude-code-LICENSE`](THIRD_PARTY_LICENSES/everything-claude-code-LICENSE)
 
 ## LICENSE
 
 本仓库自身采用 MIT License，第三方内容仍遵循其原始许可证。使用或二次分发前，请同时阅读：
 
-- [`LICENSE`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/LICENSE)
-- [`NOTICE.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/NOTICE.md)
-- [`THIRD_PARTY_LICENSES/everything-claude-code-LICENSE`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/THIRD_PARTY_LICENSES/everything-claude-code-LICENSE)
+- [`LICENSE`](LICENSE)
+- [`NOTICE.md`](NOTICE.md)
+- [`THIRD_PARTY_LICENSES/everything-claude-code-LICENSE`](THIRD_PARTY_LICENSES/everything-claude-code-LICENSE)

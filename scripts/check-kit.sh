@@ -45,6 +45,10 @@ check_file "${KIT_ROOT}/.claude/skills/documentation-lookup/SKILL.md"
 
 check_dir "${KIT_ROOT}/prompts"
 check_file "${KIT_ROOT}/README.md"
+check_file "${KIT_ROOT}/AGENTS.md"
+check_file "${KIT_ROOT}/prompts/repo-learning-notes.md"
+check_file "${KIT_ROOT}/prompts/repo-risk-check.md"
+check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
 
 if [[ "${failures}" -gt 0 ]]; then
   echo "工具包检查失败，共 ${failures} 项缺失。"

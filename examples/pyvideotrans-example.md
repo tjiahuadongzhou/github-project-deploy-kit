@@ -2,7 +2,7 @@
 
 如果你想快速部署 `pyVideoTrans`，可以直接打开：
 
-- [`prompts/deploy-pyvideotrans.md`](/Users/jiahuajiahuadongzhou/Documents/IT2026/音乐下载/github-project-deploy-kit/prompts/deploy-pyvideotrans.md)
+- [`prompts/deploy-pyvideotrans.md`](../prompts/deploy-pyvideotrans.md)
 
 或者复制下面这一段到 Claude Code / Codex：
 
