@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -15,6 +14,21 @@ check_contains() {
     echo "OK   ${path} contains ${pattern}"
   else
     echo "MISS ${path} missing ${pattern}"
+    failures=$((failures + 1))
+  fi
+}
+
+check_min_lines() {
+  local path="$1"
+  local min_lines="$2"
+  local line_count
+
+  line_count="$(wc -l < "${path}")"
+
+  if [[ "${line_count}" -gt "${min_lines}" ]]; then
+    echo "OK   ${path} has ${line_count} lines"
+  else
+    echo "MISS ${path} has only ${line_count} lines; 文件可能被压缩成单行"
     failures=$((failures + 1))
   fi
 }
@@ -102,6 +116,12 @@ check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "disable-mo
 check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "name:"
 check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "description:"
 check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "disable-model-invocation: true"
+
+check_min_lines "${KIT_ROOT}/README.md" 80
+check_min_lines "${KIT_ROOT}/scripts/check-kit.sh" 40
+check_min_lines "${KIT_ROOT}/prompts/repo-deep-teacher.md" 80
+check_min_lines "${KIT_ROOT}/prompts/repo-web-ppt-builder.md" 40
+check_min_lines "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" 60
 
 if [[ "${failures}" -gt 0 ]]; then
   echo "工具包检查失败，共 ${failures} 项缺失。"
