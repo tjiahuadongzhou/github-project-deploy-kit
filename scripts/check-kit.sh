@@ -35,6 +35,7 @@ check_min_lines() {
 
 check_file() {
   local path="$1"
+
   if [[ -f "${path}" ]]; then
     echo "OK   ${path}"
   else
@@ -45,6 +46,7 @@ check_file() {
 
 check_dir() {
   local path="$1"
+
   if [[ -d "${path}" ]]; then
     echo "OK   ${path}"
   else
@@ -93,35 +95,73 @@ check_file "${KIT_ROOT}/prompts/repo-web-ppt-builder.md"
 check_file "${KIT_ROOT}/prompts/repo-slidev-builder.md"
 check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
 
-check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-overview-teacher/SKILL.md" \
+  "disable-model-invocation: true"
 
-check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" \
+  "disable-model-invocation: true"
 
-check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md" \
+  "disable-model-invocation: true"
 
-check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md" \
+  "disable-model-invocation: true"
 
-check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md" \
+  "disable-model-invocation: true"
 
-check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "name:"
-check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "description:"
-check_contains "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" "disable-model-invocation: true"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" \
+  "disable-model-invocation: true"
 
 check_min_lines "${KIT_ROOT}/README.md" 80
 check_min_lines "${KIT_ROOT}/scripts/check-kit.sh" 40
 check_min_lines "${KIT_ROOT}/prompts/repo-deep-teacher.md" 80
 check_min_lines "${KIT_ROOT}/prompts/repo-web-ppt-builder.md" 40
-check_min_lines "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" 60
+check_min_lines \
+  "${KIT_ROOT}/.claude/skills/repo-deep-teacher/SKILL.md" \
+  60
 
 if [[ "${failures}" -gt 0 ]]; then
   echo "工具包检查失败，共 ${failures} 项缺失。"

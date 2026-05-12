@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 ## 用途
 
-当用户提供一个 GitHub 项目地址，希望生成一个“网页版 PPT / 可视化讲解页面”时，使用这个 skill。
+当用户提供一个 GitHub 项目地址，
+希望生成一个“网页版 PPT / 可视化讲解页面”时，
+使用这个 skill。
 
 ## 基本原则
 

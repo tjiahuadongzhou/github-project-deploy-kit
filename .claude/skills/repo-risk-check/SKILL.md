@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 ## 用途
 
-当用户还没决定是否要部署某个 GitHub 项目，想先做安全和风险检查时，使用这个 skill。
+当用户还没决定是否要部署某个 GitHub 项目，
+想先做安全和风险检查时，
+使用这个 skill。
 
 ## 基本原则
 
@@ -33,7 +35,8 @@ disable-model-invocation: true
 5. 是否包含未知二进制文件、预编译可执行文件或不明来源安装包
 6. 是否存在可疑网络请求、自动下载额外内容或自动上报行为
 7. 是否存在 GPU / CUDA / 驱动级安装风险
-8. 是否有 `npm postinstall`、`prepare`、`pip setup.py`、自定义构建钩子等风险点
+8. 是否有 `npm postinstall`、`prepare`、`pip setup.py`、
+   自定义构建钩子等风险点
 
 ## 输出结果
 

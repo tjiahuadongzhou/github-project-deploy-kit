@@ -8,7 +8,8 @@ disable-model-invocation: true
 
 ## 用途
 
-当用户想在 Claude Code 中部署任意 GitHub 开源项目时，使用这个 skill。
+当用户想在 Claude Code 中部署任意 GitHub 开源项目时，
+使用这个 skill。
 
 ## 基本原则
 
@@ -33,7 +34,9 @@ disable-model-invocation: true
 
 ### 第一阶段：只读分析
 
-不要安装依赖，不要修改文件。先阅读：
+不要安装依赖，
+不要修改文件。
+先阅读：
 
 - `README`
 - `docs`
@@ -55,7 +58,8 @@ disable-model-invocation: true
 
 ### 第二阶段：环境检查
 
-先检查，不要直接安装：
+先检查，
+不要直接安装：
 
 1. 操作系统
 2. CPU 架构
@@ -67,7 +71,8 @@ disable-model-invocation: true
 
 ### 第三阶段：安装计划
 
-必须先输出计划，内容至少包括：
+必须先输出计划，
+内容至少包括：
 
 1. 会执行哪些命令
 2. 每条命令的作用
@@ -77,7 +82,8 @@ disable-model-invocation: true
 6. 是否会修改系统环境
 7. 是否有高风险命令
 
-只有在用户确认后，才能进入执行阶段。
+只有在用户确认后，
+才能进入执行阶段。
 
 ### 第四阶段：执行安装
 
@@ -94,7 +100,8 @@ disable-model-invocation: true
 
 ### 第五阶段：交付结果
 
-输出中文部署笔记，至少包括：
+输出中文部署笔记，
+至少包括：
 
 1. 项目用途
 2. 安装步骤

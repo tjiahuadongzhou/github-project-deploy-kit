@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 ## 用途
 
-当你第一次看到一个 GitHub 开源项目，还不想安装、运行或修改它时，使用这个 skill。
+当你第一次看到一个 GitHub 开源项目，
+还不想安装、运行或修改它时，
+使用这个 skill。
 
 它的目标是：
 
@@ -23,7 +25,8 @@ disable-model-invocation: true
 1. 不要安装依赖
 2. 不要运行项目
 3. 不要修改任何文件
-4. 只阅读 `README`、`docs`、`package.json`、`pyproject.toml`、`pubspec.yaml`、`Cargo.toml`、`go.mod` 等关键文件
+4. 只阅读 `README`、`docs`、`package.json`、`pyproject.toml`、
+   `pubspec.yaml`、`Cargo.toml`、`go.mod` 等关键文件
 5. 如果项目很大，先只读顶层目录和核心说明文件
 
 ## 推荐配合
@@ -36,7 +39,8 @@ disable-model-invocation: true
 
 ### 1. 一句话总结这个项目
 
-用一句简单的话说明项目到底是干嘛的，不要直接复述 `README`。
+用一句简单的话说明项目到底是干嘛的，
+不要直接复述 `README`。
 
 ### 2. 这个项目解决了什么问题
 

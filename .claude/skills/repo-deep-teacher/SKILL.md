@@ -8,7 +8,9 @@ disable-model-invocation: true
 
 ## 用途
 
-当用户已经知道项目大概是做什么的，想进一步按“老师带学生读课本”的方式深挖项目时，使用这个 skill。
+当用户已经知道项目大概是做什么的，
+想进一步按“老师带学生读课本”的方式深挖项目时，
+使用这个 skill。
 
 ## 基本原则
 
@@ -26,7 +28,8 @@ disable-model-invocation: true
 - `documentation-lookup`
 - `code-reviewer`
 - 如果是 Python 项目，可额外使用 `python-reviewer`
-- 如果涉及安装 / 构建说明，可参考 `build-error-resolver` 的思路解释潜在问题，但不要直接安装
+- 如果涉及安装 / 构建说明，可参考 `build-error-resolver` 的思路解释潜在问题，
+  但不要直接安装
 
 ## 讲解任务
 
@@ -61,7 +64,8 @@ disable-model-invocation: true
 6. 和其他文件夹的关系
 7. 学习时应该怎么读
 
-如果某个文件夹不重要，要明确写：
+如果某个文件夹不重要，
+要明确写：
 “这个文件夹初学者可以先跳过”。
 
 ### 第三阶段：逐个重要文件讲解
