@@ -130,6 +130,7 @@ Windows PowerShell：
 - [`prompts/repo-md-explainer.md`](prompts/repo-md-explainer.md)：单独讲解某个 Markdown 文档
 - [`prompts/repo-web-ppt-builder.md`](prompts/repo-web-ppt-builder.md)：把 GitHub 项目生成单文件网页版 PPT
 - [`prompts/repo-slidev-builder.md`](prompts/repo-slidev-builder.md)：把 GitHub 项目生成 Slidev 演示文稿
+- [`prompts/web-research-scout.md`](prompts/web-research-scout.md)：做全网搜索调研，搜索 GitHub 项目、agent、skill、workflow 和技术方案
 - [`prompts/deploy-any-github-project.md`](prompts/deploy-any-github-project.md)：通用部署模板，适合大多数 GitHub 开源项目
 - [`prompts/deploy-python-project.md`](prompts/deploy-python-project.md)：Python 项目专用模板
 - [`prompts/deploy-node-project.md`](prompts/deploy-node-project.md)：Node.js / Next.js / React 项目专用模板
@@ -145,6 +146,7 @@ Windows PowerShell：
 - 如果某个 `README`、`AGENTS.md` 或 `docs/*.md` 看不懂，单独用 `repo-md-explainer`
 - 如果想做成适合复习或分享的网页讲解页面，用 `repo-web-ppt-builder`
 - 如果想做成更像演示文稿的网页幻灯片，用 `repo-slidev-builder`
+- 如果想先做全网搜索调研和候选方案对比，用 `web-research-scout`
 - 直接复制通用模板后粘贴 GitHub 地址
 - 按项目类型选择 Python / Node / Flutter 模板
 - 如果只想学习项目，先用 `repo-learning-notes`
@@ -180,6 +182,7 @@ Windows PowerShell：
 - `/repo-web-ppt-builder <GitHub 地址>`：把项目整理成适合浏览器直接打开的网页版 PPT
 - `/repo-risk-check <GitHub 地址>`：部署前先做只读风险检查
 - `/deploy-any-github-project <GitHub 地址>`：确认值得部署后，再按步骤做环境检查、安装计划和实际部署
+- `/web-research-scout <研究目标>`：做多轮全网搜索、阅读结果、候选对比和推荐结论
 
 这些 skill 默认更保守：
 

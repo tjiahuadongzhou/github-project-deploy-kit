@@ -72,6 +72,7 @@ check_dir "${KIT_ROOT}/.claude/skills/repo-md-explainer"
 check_dir "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder"
 check_dir "${KIT_ROOT}/.claude/skills/repo-risk-check"
 check_dir "${KIT_ROOT}/.claude/skills/deploy-any-github-project"
+check_dir "${KIT_ROOT}/.claude/skills/web-research-scout"
 
 check_file "${KIT_ROOT}/.claude/skills/codebase-onboarding/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/code-tour/SKILL.md"
@@ -82,6 +83,7 @@ check_file "${KIT_ROOT}/.claude/skills/repo-md-explainer/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/repo-web-ppt-builder/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/repo-risk-check/SKILL.md"
 check_file "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md"
+check_file "${KIT_ROOT}/.claude/skills/web-research-scout/SKILL.md"
 
 check_dir "${KIT_ROOT}/prompts"
 check_file "${KIT_ROOT}/README.md"
@@ -93,6 +95,7 @@ check_file "${KIT_ROOT}/prompts/repo-deep-teacher.md"
 check_file "${KIT_ROOT}/prompts/repo-md-explainer.md"
 check_file "${KIT_ROOT}/prompts/repo-web-ppt-builder.md"
 check_file "${KIT_ROOT}/prompts/repo-slidev-builder.md"
+check_file "${KIT_ROOT}/prompts/web-research-scout.md"
 check_file "${KIT_ROOT}/scripts/update-from-ecc.sh"
 
 check_contains \
@@ -153,6 +156,16 @@ check_contains \
   "description:"
 check_contains \
   "${KIT_ROOT}/.claude/skills/deploy-any-github-project/SKILL.md" \
+  "disable-model-invocation: true"
+
+check_contains \
+  "${KIT_ROOT}/.claude/skills/web-research-scout/SKILL.md" \
+  "name:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/web-research-scout/SKILL.md" \
+  "description:"
+check_contains \
+  "${KIT_ROOT}/.claude/skills/web-research-scout/SKILL.md" \
   "disable-model-invocation: true"
 
 check_min_lines "${KIT_ROOT}/README.md" 80
